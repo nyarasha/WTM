@@ -36,6 +36,11 @@ To get started, the only argument you'll have to change is ```--input_image``` t
 
 Recall, the shared directory is mounted as ```/workshop/shared```, so if your image is called ```cat.jpg```, then you'll want to change ```--input_image``` to ```/workshop/shared/cat.jpg```).
 
+To build the example image style transfer, run this on the terminal:
+```
+image_stylization_transform --num_styles=32 --checkpoint=/workshop/magenta/multistyle-pastiche-generator-varied.ckpt --input_image=/workshop/sample-images/basset.jpg --which_styles="[0]" --output_dir=/workshop/shared/ --output_basename="basset"
+```
+
 *If you are running on the Cloud*
 
 Upload an image to the shared directory using the Notebook Server UI. This is mounted inside the container as ```/workshop/shared```.
